@@ -1,3 +1,5 @@
+在大神的基础上继续开发
+https://github.com/xiayulei/think_admin
 ## Think Admin是什么?
 一个节省开发时间的后台管理系统，程序基于ThinkPHP 5开发，后台UI使用LayUI搭建
 
