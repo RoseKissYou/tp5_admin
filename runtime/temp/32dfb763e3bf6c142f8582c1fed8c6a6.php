@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:36:"../themes/default/article\index.html";i:1488005770;s:27:"../themes/default/base.html";i:1487998228;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:36:"../themes/default/article\index.html";i:1488006095;s:27:"../themes/default/base.html";i:1488104288;}*/ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -45,8 +45,8 @@
                     <ul>
                         <li><a <?php if($title['id'] == '1'): ?> class="active"<?php endif; ?>  href="<?php echo url('index/Index/index'); ?>">首页</a></li>
                         <li><a <?php if($title['id'] == '2'): ?> class="active"<?php endif; ?> href="<?php echo url('index/Article/index'); ?>">博客</a></li>
-                        <li><a <?php if($title['id'] == '3'): ?> class="active"<?php endif; ?> href="about.html">关于我们</a></li>
-                        <li><a <?php if($title['id'] == '4'): ?> class="active"<?php endif; ?> href="contact.html">联系我们</a></li>
+                        <li><a <?php if($title['id'] == '3'): ?> class="active"<?php endif; ?> href="<?php echo url('index/About/about'); ?>">关于我们</a></li>
+                        <li><a <?php if($title['id'] == '4'): ?> class="active"<?php endif; ?> href="<?php echo url('index/About/contact'); ?>">联系我们</a></li>
                     </ul>
                 </nav>
             </div>
@@ -65,11 +65,7 @@
                 </div>
             </div>
 
-
-
-
                 <?php if(is_array($results) || $results instanceof \think\Collection || $results instanceof \think\Paginator): if( count($results)==0 ) : echo "" ;else: foreach($results as $key=>$result): ?>
-
 
                     <div class="blog-inner">
                         <a href="#"><img class="img-responsive" src="<?php echo $result['thumb']; ?>" alt="Blog"></a>

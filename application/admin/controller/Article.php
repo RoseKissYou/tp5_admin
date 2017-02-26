@@ -73,6 +73,7 @@ class Article extends AdminBase
 
             if ($validate_result !== true) {
                 $this->error($validate_result);
+                echo '保存失败';
             } else {
                 if ($this->article_model->allowField(true)->save($data)) {
                     $this->success('保存成功');
@@ -108,6 +109,10 @@ class Article extends AdminBase
             if ($validate_result !== true) {
                 $this->error($validate_result);
             } else {
+                // 保存数据到数据库
+
+
+
                 if ($this->article_model->allowField(true)->save($data, $id) !== false) {
                     $this->success('更新成功');
                 } else {

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:32:"../admin_themes/article\add.html";i:1483610894;s:25:"../admin_themes/base.html";i:1483610894;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:32:"../admin_themes/article\add.html";i:1488102468;s:25:"../admin_themes/base.html";i:1483610894;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -147,7 +147,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">发布时间</label>
                         <div class="layui-input-block">
-                            <input type="text" name="publish_time" value="<?php echo date('Y-m-d H:i:s'); ?>" class="layui-input datetime">
+                            <input type="text" name="publish_time" value="<?php echo time(); ?>" class="layui-input datetime">
                         </div>
                     </div>
                     <div class="layui-form-item">

@@ -7,6 +7,9 @@ use think\Db;
 
 class HomeBase extends Controller
 {
+    private $_SUCCESS_CODE = 200;
+    private $_ERROR_CODE   = 0;
+    private $_FAIL_CODE = 110;
 
     protected function _initialize()
     {
@@ -66,4 +69,45 @@ class HomeBase extends Controller
 
         $this->assign('slide', $slide);
     }
+
+
+
+
+
+    /*
+     * 封装json返回格式
+     * @author xiongan  @date 2017 02 26
+     * */
+    public function thinkJson($array){
+
+        $code_num  = 0;
+        $msg       = '';
+        if(is_array($array)){
+            if(count($array) == 0){
+                //返回的数据为空, 就输出错误码
+                $code_num = $this->_ERROR_CODE;
+                $msg = '请求数据为空';
+            }else{
+                $code_num = $this->_SUCCESS_CODE;
+                $msg = '请求成功';
+            }
+        }else{
+            $code_num = $this->_FAIL_CODE;
+            $msg = '请求数据错误';
+        }
+
+        $data_array = array(
+            'error'     => $code_num,
+            'msg'       => $msg,
+            'data'      => $array
+        );
+        return json_encode($data_array,JSON_UNESCAPED_UNICODE);
+    }
+
+
+
+
+
+
+
 }

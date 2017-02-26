@@ -13,7 +13,31 @@ use think\View;
 
 
 class About extends Controller{
-    public function index(){
-        return view('index');
+
+
+
+
+    /*
+     * 关于我们
+     * */
+    public function about(){
+        $title_array = array(
+            'title'     => '关于我们'       ,
+            'id'     => 3
+        );
+        $this->assign('title',$title_array);
+        return view('about');
+    }
+
+    /*
+     * 联系我们
+     * */
+    public function contact(){
+        $title_array = array(
+            'title'     => '联系我们'       ,
+            'id'     => 4
+        );
+        $this->assign('title',$title_array);
+        return view('contact');
     }
 }

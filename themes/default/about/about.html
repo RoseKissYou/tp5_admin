@@ -1,69 +1,64 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Think Admin 后台管理系统</title>
-    <link rel="stylesheet" href="__JS__/layui/css/layui.css">
-    <style>
-        .header {
-            width: 100%;
-            height: 400px;
-            background: url(__STATIC__/images/login-bg.png) #56bc94;
-            text-align: center;
-        }
+{extend name="base" /}
+{block name="body"}
+<link rel="stylesheet" href="__JS__/layui/css/layui.css">
+<style>
+    .header {
+        width: 100%;
+        height: 400px;
+        background: url(__STATIC__/images/login-bg.png) #56bc94;
+        text-align: center;
+    }
 
-        .header .top-nav {
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
+    .header .top-nav {
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 
-        .header .top-nav h1 {
-            display: inline-block;
-            width: 300px;color: #fff;
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 24px;
-            line-height: 60px;
-            text-align: left;
-        }
+    .header .top-nav h1 {
+        display: inline-block;
+        width: 300px;color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 24px;
+        line-height: 60px;
+        text-align: left;
+    }
 
-        .header .top-nav .layui-nav {
-            position: absolute;
-            top: 0;right: 0;
-            width: 600px;
-            text-align: right;
-            background: none;
-        }
-        .header .top-nav .layui-nav a {color: #fff;}
-        .header .download-btn {
-            display: inline-block;
-            width: 200px;
-            height: 60px;
-            line-height: 60px;
-            margin-top: 150px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-            font-size: 18px;
-            transition: all .3s;
-        }
-        .header .download-btn:hover {
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
+    .header .top-nav .layui-nav {
+        position: absolute;
+        top: 0;right: 0;
+        width: 600px;
+        text-align: right;
+        background: none;
+    }
+    .header .top-nav .layui-nav a {color: #fff;}
+    .header .download-btn {
+        display: inline-block;
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+        margin-top: 150px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        font-size: 18px;
+        transition: all .3s;
+    }
+    .header .download-btn:hover {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 
-        .header .description {
-            width: 200px;
-            margin: 30px auto;
-            text-align: left;
-            color: #fff;
-        }
+    .header .description {
+        width: 200px;
+        margin: 30px auto;
+        text-align: left;
+        color: #fff;
+    }
 
-        .content {margin-top: 50px;}
-    </style>
-</head>
-<body>
+    .content {margin-top: 50px;}
+</style>
+
 <div class="header">
 
 
@@ -73,9 +68,8 @@
 
             <ul class="layui-nav">
                 <li class="layui-nav-item"><a href="">首页</a></li>
-                <li class="layui-nav-item"><a href="__SITE_URL__admin" target="_blank">后台演示</a></li>
-                <li class="layui-nav-item"><a href="http://demo.xiyilou.com/index.php/admin" target="_blank">后台演示</a></li>
-                <li class="layui-nav-item"><a href="https://github.com/xiayulei/think_admin" target="_blank">GitHub</a></li>
+                <li class="layui-nav-item"><a href="https://github.com/RoseKissYou/tp5_admin" target="_blank">rose Github</a></li>
+                <li class="layui-nav-item"><a href="https://github.com/xiayulei/think_admin" target="_blank">大神 GitHub</a></li>
             </ul>
         </div>
 
@@ -102,6 +96,7 @@
             <h3 style="font-weight: bold;">2016.12.29更新：</h3>
             <br />
             <p>
+                后台演示默认用户名和密码都是admin  访问路径 是 域名/admin
                 * 核心框架同步更新为官方5.0.4<br />
                 * 后台UI同步更新为官方1.0.7<br />
                 * 调整`model`模型目录至`common`公共目录<br />
@@ -124,5 +119,4 @@
 <script>
     var element = layui.element();
 </script>
-</body>
-</html>
+{/block}

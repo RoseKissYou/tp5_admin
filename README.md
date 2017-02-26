@@ -1,33 +1,32 @@
-在大神的基础上继续开发
+在大神的基础上继续开发  源头请查看大神的网址
 https://github.com/xiayulei/think_admin
 ## Think Admin是什么?
 一个节省开发时间的后台管理系统，程序基于ThinkPHP 5开发，后台UI使用LayUI搭建
 
-## 2016.12.29更新：
+QQ扫一扫加入讨论群一起开发  
+<p align="center">
+<img src="https://github.com/RoseKissYou/tp5_admin/master/public/static/temp/tp5-admincode.png" width="702" style="margin:0 auto" />
+</p>
+或者加入大神的qq群(比较安静)
 
-* 核心框架同步更新为官方5.0.4
-* 后台UI同步更新为官方1.0.7
-* 调整`model`模型目录至`common`公共目录
-* 统一上传接口为`api`模块下`Upload`控制器
-* 分类表增加path字段，优化子分类查询
-* 增加单独密码修改功能，防止低权管理员随意修改自己权限组
-* 更换后台富文本编辑器为KindEditor
-* 恢复入口文件至public目录，减少整体结构调整
-* 修复一些BUG
+## 2017 02 25 更新放了简单的博客首页,模板是网上找的, 内容没有修改
 
-其它更新请自行查看
+<p align="center">
+<img src="https://github.com/RoseKissYou/tp5_admin/master/public/static/temp/tp5-admin.png" width="702" style="margin:0 auto" />
+</p>
+<p align="center">
+<img src="https://github.com/RoseKissYou/tp5_admin/master/public/static/temp/tp5-admin1.png" width="702" style="margin:0 auto" />
+</p>
 
-## 安装使用：
-* 此版本结构变动较大，不建议1.0.5版本用户直接更新升级
-* 使用本程序，默认用户已经掌握composer技能，Github更新默认不上传`vendor`目录，第三方类库`vendor`目录内程序需要用户自行使用composer安装
-* 如需下载完整版，可以在`releases`中选择`think_admin_full`版本下载，
-* 程序下载完成后，在程序目录内执行`composer update`命令进行`vendor`引用类库安装
-* 数据库文件为`think_admin.sql`
-* 下载程序至本地，建议搭建虚拟域名站点进行测试，防止出现路径错误的问题
-* 站点开发前，请先修改`application`目录下的`config`配置文件，找到`salt`项，此项为全站加密公用盐值，请先修改，然后使用`md5('新密码' . config('salt'))`生成新密码，替换`admin_user`表中的默认管理员密码
+后台是大神已经做好了的
+<p align="center">
+<img src="https://github.com/RoseKissYou/tp5_admin/master/public/static/temp/tp5-admin3.png" width="702" style="margin:0 auto" />
+</p>
 
-## 版权信息
 
-Think Admin遵循Apache2开源协议发布，并提供免费使用。
+
+
+## 2017 02 26
+添加了api接口
 
 版权所有Copyright © 2016 by Think Admin All rights reserved。

@@ -3,7 +3,6 @@ namespace app\common\model;
 
 use think\Model;
 use think\Session;
-//  @author rose @date 2017 02 25
 use think\Db;
 
 class Article extends Model
@@ -64,9 +63,36 @@ class Article extends Model
      * @author rose @date 2017 02 25
      * @return bool|string
      */
-    protected function showAllArticles(){
+    public function showAllArticles(){
         return Db::name('article')->select();
     }
+
+    /*
+     * 展示首页列表数据 id cid title introduction reading  thumb publish_time
+     * */
+    public function showHomeList(){
+     //   return Db::name('article')->select('title');
+        return Db::query('SELECT id,title,introduction,publish_time FROM think_article ');
+    }
+
+    /*
+     * 获取详情数据 根据id指定返回 对应的所有数据
+     * @author xiongan  @date 2017 02 26
+     * */
+    public function showOneArticle($id){
+//        return Db::query('SELECT id,title,introduction,publish_time FROM think_article ');
+        return Db::name('article')->where(['id'=>$id])->select();
+    }
+
+    /*
+     * 写入数据库
+     * @author xiongan  @date 2017 02 26
+     * */
+
+
+
+
+
 
 
 
