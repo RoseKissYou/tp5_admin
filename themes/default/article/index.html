@@ -1,8 +1,31 @@
 {extend name="base" /}
 {block name="body"}
 
-<div class="hello">
-    这是博客页面
+<div class="blog-content">
+    <div id="fh5co-blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                    <h2>tp5 测试博客系统</h2>
+                    <p><span>Created with <i class="sl-icon-heart"></i> xiayulei <a href="https://github.com/xiayulei/think_admin">github</a></span></p>
+                </div>
+            </div>
+
+                {foreach name="results" item="result"}
+
+                    <div class="blog-inner">
+                        <a href="#"><img class="img-responsive" src="{$result.thumb}" alt="Blog"></a>
+                        <div class="desc">
+                            <h3><a href="#">{$result.title}</a></h3>
+                            <p>{$result.introduction}</p>
+                            <p><a href="#" class="btn btn-primary btn-outline with-arrow">阅读全文<i class="icon-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                {/foreach}
+
+
+        </div>
+    </div>
 
 </div>
 

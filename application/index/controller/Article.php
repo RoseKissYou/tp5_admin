@@ -22,14 +22,16 @@ class Article extends HomeBase
      * */
     public function index(){
         $articles = Db::name('article')->select();
-       // var_dump($articles);
+//        var_dump($articles);
         $title_array = array(
             'title'     => '博客'       ,
             'id'     => 2
         );
         $this->assign('title',$title_array);
+        $this->assign('results',$articles);
         return view('index');
     }
+
     /*
      *add a  article
      * @author rose @date 2017 02 25
@@ -37,6 +39,15 @@ class Article extends HomeBase
     public function add(){
 
     }
+
+    /*
+    * show article detail
+    * @author rose @date 2017 02 25
+    * */
+    public function detail(){
+
+    }
+
 
 
 

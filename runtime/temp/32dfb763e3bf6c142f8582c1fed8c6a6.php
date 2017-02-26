@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:36:"../themes/default/article\index.html";i:1487997906;s:27:"../themes/default/base.html";i:1487998228;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:36:"../themes/default/article\index.html";i:1488005770;s:27:"../themes/default/base.html";i:1487998228;}*/ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -55,8 +55,35 @@
     <!--主体-->
     
 
-<div class="hello">
-    这是博客页面
+<div class="blog-content">
+    <div id="fh5co-blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                    <h2>tp5 测试博客系统</h2>
+                    <p><span>Created with <i class="sl-icon-heart"></i> xiayulei <a href="https://github.com/xiayulei/think_admin">github</a></span></p>
+                </div>
+            </div>
+
+
+
+
+                <?php if(is_array($results) || $results instanceof \think\Collection || $results instanceof \think\Paginator): if( count($results)==0 ) : echo "" ;else: foreach($results as $key=>$result): ?>
+
+
+                    <div class="blog-inner">
+                        <a href="#"><img class="img-responsive" src="<?php echo $result['thumb']; ?>" alt="Blog"></a>
+                        <div class="desc">
+                            <h3><a href="#"><?php echo $result['title']; ?></a></h3>
+                            <p><?php echo $result['introduction']; ?></p>
+                            <p><a href="#" class="btn btn-primary btn-outline with-arrow">阅读全文<i class="icon-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+        </div>
+    </div>
 
 </div>
 
