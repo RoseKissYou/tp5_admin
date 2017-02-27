@@ -67,6 +67,8 @@ class Article extends AdminBase
      */
     public function save()
     {
+
+
         if ($this->request->isPost()) {
             $data            = $this->request->param();
             $validate_result = $this->validate($data, 'Article');
@@ -111,13 +113,14 @@ class Article extends AdminBase
             } else {
                 // 保存数据到数据库
 
-
-
                 if ($this->article_model->allowField(true)->save($data, $id) !== false) {
                     $this->success('更新成功');
                 } else {
                     $this->error('更新失败');
                 }
+
+
+
             }
         }
     }
