@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:32:"../admin_themes/article\add.html";i:1488102468;s:25:"../admin_themes/base.html";i:1483610894;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:32:"../admin_themes/article\add.html";i:1488179637;s:25:"../admin_themes/base.html";i:1483610894;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -74,6 +74,7 @@
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
+
                 <form class="layui-form form-container" action="<?php echo url('admin/article/save'); ?>" method="post">
                     <div class="layui-form-item">
                         <label class="layui-form-label">所属栏目</label>

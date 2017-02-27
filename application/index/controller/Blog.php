@@ -67,7 +67,7 @@ class Blog extends HomeBase{
     public function detail($id=0){
         if(!empty($id)){
             // 根据id查询数据
-            $re =  $this->_bolg_model->showOneArticle($id);
+            $re =  $this->_bolg_model->showOneBlog($id);
             $title_array = array(
                 'title'     => '博客'     ,
                 'id'     => 2
@@ -103,6 +103,12 @@ class Blog extends HomeBase{
         }
 
     }
+
+    public function save(){
+
+    }
+
+
 
 
 
