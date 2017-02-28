@@ -50,7 +50,11 @@ class Article extends AdminBase
         $article_list  = $this->article_model->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
         $category_list = $this->category_model->column('name', 'id');
 
-        return $this->fetch('index', ['article_list' => $article_list, 'category_list' => $category_list, 'cid' => $cid, 'keyword' => $keyword]);
+        return $this->fetch('index', [
+            'article_list' => $article_list,
+            'category_list' => $category_list,
+            'cid' => $cid, 'keyword' => $keyword
+        ]);
     }
 
     /**
@@ -68,9 +72,9 @@ class Article extends AdminBase
     public function save()
     {
 
-
         if ($this->request->isPost()) {
             $data            = $this->request->param();
+            // validate 验证数据
             $validate_result = $this->validate($data, 'Article');
 
             if ($validate_result !== true) {

@@ -4,13 +4,15 @@
     <!--tab标签-->
     <div class="layui-tab layui-tab-brief">
         <ul class="layui-tab-title">
-            <li class=""><a href="{:url('admin/article/index')}">文章管理</a></li>
+            <li class=""><a href="{:url('admin/blog/index')}">文章管理</a></li>
             <li class="layui-this">添加文章</li>
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
 
-                <form class="layui-form form-container" action="{:url('admin/article/save')}" method="post">
+                <form class="layui-form form-container" action="{:url('admin/Blog/add')}" method="post">
+
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">所属栏目</label>
                         <div class="layui-input-block">
@@ -39,12 +41,9 @@
                             <textarea name="introduction" placeholder="（选填）请输入简介" class="layui-textarea"></textarea>
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">内容</label>
-                        <div class="layui-input-block">
-                            <textarea name="content" placeholder="" class="layui-textarea" id="content"></textarea>
-                        </div>
-                    </div>
+
+
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">缩略图</label>
                         <div class="layui-input-block">
@@ -52,13 +51,7 @@
                             <input type="file" name="file" class="layui-upload-file">
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">图集</label>
-                        <div class="layui-input-block">
-                            <button type="button" id="upload-photo-btn" class="layui-btn">上传图集</button>
-                            <div id="photo-container"></div>
-                        </div>
-                    </div>
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">状态</label>
                         <div class="layui-input-block">
@@ -83,7 +76,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">发布时间</label>
                         <div class="layui-input-block">
-                            <input type="text" name="publish_time" value="{:date('Y-m-d H:i:s')}" class="layui-input datetime">
+                            <input type="text" name="publish_time" value="{:time()}" class="layui-input datetime">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -92,11 +85,33 @@
                             <input type="text" name="sort" value="0" required  lay-verify="required" class="layui-input">
                         </div>
                     </div>
+
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">新增数据</label>
+                        <div class="layui-input-block">
+                            <input name="imgbtn" type="image" src="__STATIC__/images/add_img.png" width="150" height="150" border="0" onClick="this.form.action='jszx.asp';this.form.submit()">
+                            添加图片
+                            <input name="imgbtn" type="image" src="__STATIC__/images/add_text.png" width="150" height="150" border="0" onClick="this.form.action='jszx.asp';this.form.submit()">
+                            添加文本
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容</label>
+                        <div class="layui-input-block">
+                            <textarea name="content" placeholder="" class="layui-textarea" id="content"></textarea>
+                        </div>
+                    </div>
+
+
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit lay-filter="*">保存</button>
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            <button type="submit"  class="layui-btn">提交</button>
                         </div>
+
                     </div>
                 </form>
             </div>
@@ -109,6 +124,7 @@
 <script src="__JS__/kindeditor/kindeditor-all-min.js"></script>
 {/block}
 {block name="script"}
+
 <script>
     $(document).ready(function () {
         var _kindEditor;
@@ -139,4 +155,5 @@
         });
     });
 </script>
+
 {/block}

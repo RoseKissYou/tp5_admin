@@ -65,7 +65,7 @@ var KindEditorOptions = {
     newlineTag: "p",
     minHeight: 300,
     filePostName: "file",
-    uploadJson: "/index.php/api/upload/upload",
+    uploadJson: "/api/upload/upload",
     cssPath: GV.base_url + "/js/kindeditor/kindeditor.css",
     allowMediaUpload: false,
     allowFileUpload: false,

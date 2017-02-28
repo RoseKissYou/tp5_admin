@@ -38,6 +38,7 @@ class Blog extends Model{
 
     /*
      * show blog list
+     * @author xiongan  @date 2017 02 26
      * */
     public function showAll($cid = 0, $keyword = '', $page = 1){
         $map = [];
@@ -45,14 +46,29 @@ class Blog extends Model{
 
         if($cid>0){
 //            $category_children_ids = $this->category_model->where(['path' => ['like', "%,{$cid},%"]])->column('id');
-            $category_children_ids = Db::name('blog')->where(['path' => ['like', "%,{$cid},%"]])->column('id');
+            $category_children_ids = Db::name('category')->where(['path' => ['like', "%,{$cid},%"]])->column('id');
             $category_children_ids = (!empty($category_children_ids) && is_array($category_children_ids)) ? implode(',', $category_children_ids) . ',' . $cid : $cid;
             $map['cid']            = ['IN', $category_children_ids];
         }
         if(!empty($keyword)){
             $map['title'] = ['like',"%{$keyword}%"];
         }
+      $blog_list        =  Db::name('blog')->field($field)->where($map)->order(['publish_time' => 'DESC'])->paginate(15, false, ['page' => $page]);
+      $category_list    =   Db::name('category')->column('name','id');
 
+        return array(
+            'article_list' => $blog_list,
+            'category_list' => $category_list,
+            'cid' => $cid, 'keyword' => $keyword
+        );
+
+    }
+
+    /*
+     * new data for blog
+     * */
+    public function kk(){
+        
     }
 
 

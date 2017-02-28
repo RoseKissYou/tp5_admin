@@ -21,7 +21,7 @@ class Blog  extends AdminBase{
     protected  $_blog_model;
     protected $category_model;
 
-    protected function __initialize(){
+    protected function _initialize(){
         parent::_initialize();
         $this->_blog_model = new BlogModel();
         $this->category_model = new CategoryModel();
@@ -36,20 +36,47 @@ class Blog  extends AdminBase{
     public function index($cid = 0, $keyword = '', $page = 1){
 
 
-        $blog_list = '';
-
-        $category_list  = '';
-
+     //   $blog_list = new BlogModel();
+       $blog_result = $this->_blog_model->showAll($cid,$keyword,$page);
 
         return $this->fetch('index', [
-            'article_list' => $blog_list,
-            'category_list' => $category_list,
-            'cid' => $cid, 'keyword' => $keyword
+            'article_list' => $blog_result['article_list'],
+            'category_list' => $blog_result['category_list'],
+            'cid' => $blog_result['cid'],
+            'keyword' => $blog_result['keyword'],
         ]);
+    }
 
+    /**
+     * 添加文章
+     * @return mixed
+     */
+    public function add()
+    {
+        if ($this->request->isPost()) {
+            $data            = $this->request->param();
+            // 验证数据  上传图片返回服务器的地址
+
+          $blog_model = new BlogModel();
+            // 选取data数据上传到数据库
+
+
+
+
+//            $res = $blog_model->allowField(true)->
+        }else{
+
+            return $this->fetch('add');
+        }
 
 
     }
+
+
+
+
+
+
 
 
 
