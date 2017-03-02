@@ -64,7 +64,7 @@ class Article extends Model
      * @return bool|string
      */
     public function showAllArticles(){
-        return Db::name('blog')->select();
+        return Db::name('article')->select();
     }
 
     /*
@@ -72,7 +72,7 @@ class Article extends Model
      * */
     public function showHomeList(){
      //   return Db::name('article')->select('title');
-        return Db::query('SELECT id,title,introduction,publish_time FROM think_blog ');
+        return Db::query('SELECT id,title,introduction,publish_time,thumb FROM think_article ');
     }
 
     /*
@@ -81,7 +81,7 @@ class Article extends Model
      * */
     public function showOneArticle($id){
 //        return Db::query('SELECT id,title,introduction,publish_time FROM think_article ');
-        return Db::name('blog')->where(['id'=>$id])->select();
+        return Db::name('article')->where(['id'=>$id])->select();
     }
 
     /*

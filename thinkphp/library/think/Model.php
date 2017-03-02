@@ -353,7 +353,9 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
         if (false !== strpos($format, '\\')) {
             $time = new $format($time);
         } elseif (!$timestamp && false !== $format) {
-            $time = date($format, $time);
+            //  tp5自动强制使用int类型作为时间戳
+                 $time = date($format, $time);
+//            $time = date($format, (int)$time);
         }
         return $time;
     }

@@ -6,7 +6,7 @@ use app\common\model\Article as ArticleModel;
 use app\common\model\Category as CategoryModel;
 use think\Controller;
 use think\View;
-use think\Db;
+
 
 
 /**
@@ -16,16 +16,26 @@ use think\Db;
  */
 class Article extends HomeBase
 {
+    private $_article_model;
+    /*
+     * 控制器初始化
+     * */
+    public function _initialize()
+    {
+        $this->_article_model = new ArticleModel();
+    }
+
     /*
      *show all articles
      * @author rose @date 2017 02 25
      * */
     public function index(){
-        $articles = Db::name('article')->select();
+
+        $articles = $this->_article_model->showHomeList();
 //        var_dump($articles);
         $title_array = array(
             'title'     => '博客'       ,
-            'id'     => 2
+            'id'     => 5
         );
         $this->assign('title',$title_array);
         $this->assign('results',$articles);
@@ -44,8 +54,24 @@ class Article extends HomeBase
     * show article detail
     * @author rose @date 2017 02 25
     * */
-    public function detail(){
 
+    public function detail($id=0){
+        if(!empty($id)){
+            // 根据id查询数据
+            $re =  $this->_article_model->showOneArticle($id);
+            $title_array = array(
+                'title'     => '文章'     ,
+                'id'     => 5
+            );
+            $this->assign('title',$title_array);
+
+            $this->assign('results',$re);
+            return view('detail');
+            //  return $this->thinkJson($re);
+        }else{
+//            return $this->thinkJson($id);
+            return 'error';
+        }
     }
 
 

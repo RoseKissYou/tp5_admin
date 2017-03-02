@@ -1,0 +1,16 @@
+{extend name="base" /}
+{block name="body"}
+
+
+<div class="article-content">
+    {foreach name="results" item="result"}
+    <h2>{$result.title}</h2>
+    {$result.content}
+
+    {/foreach}
+
+</div>
+
+
+
+{/block}

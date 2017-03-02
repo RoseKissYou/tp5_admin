@@ -1,17 +1,18 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2017/2/28
+ * Time: 15:02
+ */
 
 return [
     // +----------------------------------------------------------------------
-    // | 后台模板设置
+    // | 模板设置
     // +----------------------------------------------------------------------
 
-    /*
-      'template' => [
-        // 模板路径
-        'view_path' => '../admin_themes/'
-    ],*/
     'template' => [
         // 模板路径
-        'view_path' => '../application/admin/admin_themes/'
+        'view_path' => '../application/web/view/default/',
     ],
 ];

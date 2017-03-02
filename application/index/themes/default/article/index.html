@@ -1,0 +1,115 @@
+{extend name="base" /}
+{block name="body"}
+
+<div class="blog-content">
+    <div id="fh5co-blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                    <h2>tp5 测试博客系统</h2>
+                    <p><span>Created with <i class="sl-icon-heart"></i> xiayulei <a href="https://github.com/xiayulei/think_admin">github</a></span></p>
+                </div>
+            </div>
+
+                {foreach name="results" item="result"}
+
+                    <div class="blog-inner">
+                        <a href="#"><img class="img-responsive" src="{$result.thumb}" alt="Blog"></a>
+                        <div class="desc">
+                            <h3><a href="#">{$result.title}</a></h3>
+                            <p>{$result.introduction}</p>
+                            <p><a href="{:url('index/article/detail',['id'=>$result['id']])}" class="btn btn-primary btn-outline with-arrow">阅读全文<i class="icon-arrow-right"></i></a></p>
+                        </div>
+                    </div>
+                {/foreach}
+
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Page Title -->
+<div class="section section-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Theme Features</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+
+
+
+        <div class="row service-wrapper-row">
+            <div class="col-sm-4">
+                <div class="service-image">
+                    <img src="__STATIC__/images/homepage-slider/slide2.png" alt="Color Schemes">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Color Scheme matching your branding</h3>
+                <p>
+                    Template comes with five color themes (Blue, Orange, Green, Red and Grey). All you need to do is to use relevant CSS file.
+                </p>
+                <p>
+                    There is no color scheme that matches your branding? No problem.  You can easily compile your own by changing one variable - thanks to LESS!
+                </p>
+            </div>
+        </div>
+
+
+        {foreach name="results" item="result"}
+        <div class="row service-wrapper-row">
+            <div class="col-sm-4">
+                <div class="service-image">
+                    <img src="__STATIC__/images/less-logo.png" alt="{$result.title}">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>{$result.title}</h3>
+                <p>{$result.introduction}</p>
+                <p>{$result.introduction}</p>
+            </div>
+        </div>
+        {/foreach}
+
+        <div class="row service-wrapper-row">
+            <div class="col-sm-4">
+                <div class="service-image">
+                    <img src="__STATIC__/images/homepage-slider/slide1.png" alt="Responsive">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Fully Responsive</h3>
+                <p>
+                    It looks great on desktops, laptops, tablets and smartphones - mPurpose template was built to shine on all devices :)
+                </p>
+                <p>
+                    You can be sure that all the components are responsive.
+                </p>
+            </div>
+        </div>
+        <div class="row service-wrapper-row">
+            <div class="col-sm-4">
+                <div class="service-image">
+                    <img src="__STATIC__/images/flags.png" alt="Flags">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3>Additional Icons - Flags</h3>
+                <p>
+                    Template comes with 247 flag icons representing most countries in the world
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{/block}

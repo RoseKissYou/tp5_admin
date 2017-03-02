@@ -4,8 +4,13 @@ return [
     // | 模板设置
     // +----------------------------------------------------------------------
 
-    'template' => [
+    /*
+      'template' => [
         // 模板路径
         'view_path' => '../themes/default/',
+    ],*/
+    'template' => [
+        // 模板路径
+        'view_path' => '../application/index/themes/default/',
     ],
 ];

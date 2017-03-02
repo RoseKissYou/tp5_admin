@@ -20,6 +20,7 @@ class AuthGroup extends AdminBase
         parent::_initialize();
         $this->auth_group_model = new AuthGroupModel();
         $this->auth_rule_model  = new AuthRuleModel();
+
     }
 
     /**
@@ -39,6 +40,13 @@ class AuthGroup extends AdminBase
      */
     public function add()
     {
+        // 添加rules选项
+        $admin_menu_list       = $this->auth_rule_model->order(['sort' => 'DESC', 'id' => 'ASC'])->select();
+        $admin_menu_level_list = array2level($admin_menu_list);
+
+        $this->assign('admin_menu_level_list', $admin_menu_level_list);
+
+
         return $this->fetch();
     }
 

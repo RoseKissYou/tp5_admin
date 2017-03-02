@@ -48,6 +48,8 @@ return [
     'auto_timestamp' => false,
     // 是否需要进行SQL性能分析
     'sql_explain'    => false,
+    //   时间戳显示bug  修改数据库配置文件
+    'datetime_format' =>false
 
 
     // 是否自动写入时间戳字段

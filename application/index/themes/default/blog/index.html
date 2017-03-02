@@ -1,0 +1,38 @@
+{extend name="base" /}
+{block name="body"}
+
+<div class="blog-content">
+    <div id="fh5co-blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                    <h2>tp5 测试博客系统</h2>
+                    <p><span>Created with <i class="sl-icon-heart"></i>  <a href="{:url('index/blog/add')}">添加博客</a></span></p>
+                </div>
+            </div>
+
+            {foreach name="results" item="result"}
+
+            <div class="blog-inner">
+
+                <a href="{:url('index/blog/detail',['id'=>$result['id']])}"><img style="margin: auto;" class="img-responsive" src="{$result.thumb}" alt="Blog"></a>
+                <div class="desc">
+                    <h3>{$result.title}</h3>
+                    <p>{$result.introduction}</p>
+                    <p><a href="{:url('index/blog/detail',['id'=>$result['id']])}" class="btn btn-primary btn-outline with-arrow">阅读全文<i class="icon-arrow-right"></i></a></p>
+                </div>
+            </div>
+            {/foreach}
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+{/block}

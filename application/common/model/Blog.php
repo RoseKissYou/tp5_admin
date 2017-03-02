@@ -68,7 +68,7 @@ class Blog extends Model{
      * new data for blog
      * */
     public function kk(){
-        
+
     }
 
 
