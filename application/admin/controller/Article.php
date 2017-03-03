@@ -82,7 +82,9 @@ class Article extends AdminBase
                 echo '保存失败';
             } else {
                 if ($this->article_model->allowField(true)->save($data)) {
-                    $this->success('保存成功');
+                    //   $this->success('保存成功');
+                    //设置成功后跳转页面的地址，默认的返回页面是$_SERVER['HTTP_REFERER']
+                    $this->success('新增成功', 'Article/index');
                 } else {
                     $this->error('保存失败');
                 }
@@ -118,7 +120,8 @@ class Article extends AdminBase
                 // 保存数据到数据库
 
                 if ($this->article_model->allowField(true)->save($data, $id) !== false) {
-                    $this->success('更新成功');
+//                    $this->success('更新成功');
+                    $this->success('新增成功', 'Article/index');
                 } else {
                     $this->error('更新失败');
                 }

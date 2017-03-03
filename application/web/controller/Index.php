@@ -24,8 +24,40 @@ class Index extends WebBase{
      * */
     public function index(){
 
-
-
+        $this->assign('title',array(
+            'title'=>'首页'
+        ));
         return $this->fetch();
+
     }
+
+    /*
+     *
+     * */
+    public function show_id($id){
+        // 从数据库获取数据
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

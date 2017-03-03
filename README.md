@@ -3,11 +3,6 @@ https://github.com/xiayulei/think_admin
 ## Think Admin是什么?
 一个节省开发时间的后台管理系统，程序基于ThinkPHP 5开发，后台UI使用LayUI搭建
 
-QQ扫一扫加入讨论群一起开发
-<p align="center">
-<img src="http://by.dgyzf.net/images/tp5-admincode.png" width="702" style="margin:0 auto" />
-</p>
-或者加入大神的qq群(比较安静)
 
 ## 2017 02 25 更新放了简单的博客首页,模板是网上找的, 内容没有修改
 
