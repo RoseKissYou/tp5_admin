@@ -85,9 +85,12 @@ class Article extends Model
     }
 
     /*
-     * 写入数据库
-     * @author xiongan  @date 2017 02 26
+     * 根据id返回数据
+     * @author xiongan  @date 2017 03 03
      * */
+    public function showInfoById($id){
+
+    }
 
 
 

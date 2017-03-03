@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+html { font-size:62.5%; }
+
+body { font-family:Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, sans-serif; min-width:320px; background:#fff; color:#373737; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:normal; }
+
+body, div, p, span, form, iframe, table, td, th, input, textarea, button, label, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, blockquote { margin:0; padding:0; }
+
+ul, ol, li, dl { list-style-type:none; }
+
+em, i, dfn, cite, strong, small { font-style:normal; }
+
+/*color*/
+
+a:link, a:visited, a:hover { color:#fff; text-decoration:none; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+/* clearfix */
+
+.clearfix { *zoom:1;
+
+}
+
+.clearfix:after { display:table; line-height:0; content:""; clear:both; }
+
+img { width:100%; display:block; }
+
+.wrap { max-width: 640px; margin:0 auto; }
+
+h3 { margin: 1.5rem 0; background: #2680d8; color: #FFF; font-size: 1.3rem; line-height: 3rem; text-align: center; }
+
+.al_box { margin:1rem }
+
+.al_box h1 { font-size:2.2rem; color:#000000 }
+
+.al_box .text { font-size:1.2rem; line-height:2rem; margin:1rem 0 }
+
+.tips {
+
+padding:.8rem; background: #e9f4ff; line-height: 2.3rem; font-size:1.2rem; color: #373737; margin-top:1rem }
+
+.tips h5 { font-size:1.4rem; }
+
+.al_box dl { width:100%; overflow:hidden; margin-bottom:.5rem
+
+}
+
+.al_box dt { width:50px; float:left; }
+
+.al_box dd { margin-left:60px; font-size:18px }
+
+.al_box dd img { width:8%; display:inline-block; vertical-align: middle; margin:0 .2rem
+
+}
+
+.al_box dd p { color:#999; margin-top:1% }
+
+.pinglun { width:100%; overflow:hidden; margin-bottom:2rem }
+
+.zan { background:#eee; color:#999; font-size:1.2rem; line-height:3rem; padding:0 .5rem;
+
+border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf }
+
+.pinglun li { border-bottom:1px solid #cfcfcf; padding:1rem 0 1rem 1rem; overflow:hidden; }
+
+.pinglun dl { width:100%; overflow:hidden; margin-bottom:.5rem
+
+}
+
+.pinglun dt { width:50px; float:left; }
+
+.pinglun dd { margin-left:60px; font-size:18px }
+
+.pinglun dd img { width:8%; display:inline-block; vertical-align: middle; margin:0 .2rem
+
+}
+
+.pinglun dd p { color:#999; margin-top:1% }
+
+.pinglun .pl { margin-left:60px; font-size:1.5rem; line-height:2.4rem; padding:.1rem 0 .5rem;
+
+}
+
+.pinglun .hf { margin-left:60px; font-size:1.5rem; padding:.5rem 0 0;
+
+border-top:1px solid #cfcfcf }
+
+.pinglun .hf img { width:8%; display:inline-block; vertical-align: middle; margin:0 .2rem
+
+}
+
+.pinglun .hf span { color:#1c61df }
+
+.pinglun .pl img { width:90%; }
+
+.mt10 { margin-top:.5rem
+
+}
+
+.more { font-size:1.5rem; line-height:2.4rem; margin:1rem 0; color:#999; text-align:center }
+
+.zd { background:#ffeaee; color:#ff3d78; font-size:1.5rem; line-height:2.4rem; padding:1rem }
+
+.zd h2 { font-size:1.5rem; color:#fff; background:#0080da; padding:.5rem
+
+}
+
+.bt_bar { background:#3cb034; color:#fff; position: fixed; bottom:0; width:100%; overflow:hidden; font-size:1.5rem; line-height:2.5rem; max-width: 640px; }
+
+.bt_bar .tx { width:2.5rem; height:2.5rem; border-radius: 50%; overflow:hidden; display:inline-block; float:left; margin:.2rem 0 0 .5rem
+
+}
+
+.bt_bar .wx { width:2.6rem; display:inline-block; float:left; margin:0 .4rem
+
+}
+
+.bt_bar img { vertical-align: middle; }
+
+.bt_bar .fz_btn { width:4rem; height:2rem; float:right; cursor:pointer; border:none; background:url("../images/btn.png.html") no-repeat; background-size:100% 100%; margin:.6rem .5rem 0 0
+
+}
+
+.btcode { width: 100%; background: #2680d8; color: #FFF; font-size: 1.3rem; line-height: 3rem; text-align: center; position: fixed; bottom: 0; max-width: 640px }
+
+ @media only screen and (min-width:361px) {
+
+html { font-size:72%!important }
+
+}
+
+@media only screen and (min-width:381px) {
+
+html { font-size:78%!important }
+
+}
+
+@media only screen and (min-width:481px) {
+
+html { font-size:94%!important }
+
+}
+
+@media only screen and (min-width:561px) {
+
+html { font-size:109%!important }
+
+}
+
+@media only screen and (min-width:641px) {
+
+html { font-size:125%!important }
+
+body { max-width:640px; margin:0 auto; }
+
+}
+
+.top { padding: 5px; overflow: hidden; position: fixed; max-width: 640px; top:0; background: #fff; box-shadow: 0 6px 6px #ccc; }
+
+.top .img { width: 20%; float: left; }
+
+.top .r_text { width:77%; float: left; padding:3% 0 0 2%; font-size: 16px; line-height: 26px }
+
+.top .r_text strong { font-size: 20px }
+
+.top strong { background: #f00; color: #fff; font-size: 18px; }
+
+
+
+
+
