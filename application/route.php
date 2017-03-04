@@ -13,5 +13,8 @@ return [
     '__pattern__' => [
         'name' => '\w+',
     ],
+    '__domain__' => [
+        'm' => 'phone',
+    ],
 
 ];

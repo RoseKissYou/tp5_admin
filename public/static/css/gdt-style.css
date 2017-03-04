@@ -31,6 +31,14 @@
 .side-bar .icon-qq {
 	background-position: 0 -62px;
 }
+
+@media screen and (max-width: 970px){
+    .side-bar .icon-qq
+    {position: fixed;
+        left:-1000px;
+    }
+}
+
 .side-bar .icon-chat {
 	background-position: 0 -130px;
 	position: relative;

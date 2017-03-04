@@ -6,7 +6,7 @@
  * Time: 15:01
  */
 
-namespace app\web\controller;
+namespace app\phone\controller;
 
 use app\common\controller\WebBase;
 use think\Session;
@@ -38,27 +38,6 @@ class Index extends WebBase{
      *
      * */
     public function detail($id=0){
-        // 从数据库获取数据
-        if(empty($id)){
-            $this->error('文章已经被删除或者不存在','Index/index');
-        }else{
-            $re =  $this->_article_model->showOneArticle($id);
-            $this->assign('title',array(
-                'title'=>'文案'
-            ));
-            $this->assign('results',$re);
-//            var_dump($resutl);
-            return $this->fetch();
-        }
-
-    }
-
-
-
-    /*
-     *
-     * */
-    public function base2($id=0){
         // 从数据库获取数据
         if(empty($id)){
             $this->error('文章已经被删除或者不存在','Index/index');
